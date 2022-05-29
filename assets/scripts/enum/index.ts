@@ -9,4 +9,10 @@ export enum Sceneenum{
     DormiS2_2_2 = "DormiS2_2_2",
     DormiS4_1 = "DormiS4_1",
     DormiS4_2 = "DormiS4_2",
+    DiningS1 = "DiningS1",
+    DiningS2 = "DiningS2",
+    ClassS1 = "ClassS1",
+    ClassS2 = "ClassS2",
+    ActS1 = "ActS1",
+    ACtS2 = "ActS2",
 }

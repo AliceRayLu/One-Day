@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "pic1",
+    "_name": "Maoliang",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -74,8 +74,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 50,
-      "height": 50
+      "width": 100,
+      "height": 100
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -86,7 +86,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "b6RXQ0PlJOHJcyXel8Dv1Q"
+    "fileId": "66s6KUm2JEoaSqYjRFw0mv"
   },
   {
     "__type__": "cc.Sprite",
@@ -111,7 +111,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "ec58861c-f22a-4666-bcf1-fca7601130c6@f9941",
+      "__uuid__": "2ecc4384-fcbf-4dd3-a8dc-de4c894c7fff@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -131,10 +131,10 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "37fm6jUHdCnbNH6uu8FvHQ"
+    "fileId": "72v6RxRAJAppvz8m9Sfu8R"
   },
   {
-    "__type__": "085edEiYU5DroBNbxS+WfdK",
+    "__type__": "6d0a5jPvcBDPpfjJ8JuAj8a",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -145,18 +145,18 @@
       "__id__": 7
     },
     "scenesf": {
-      "__uuid__": "ec58861c-f22a-4666-bcf1-fca7601130c6@f9941",
+      "__uuid__": "2ecc4384-fcbf-4dd3-a8dc-de4c894c7fff@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "inventorysf": {
-      "__uuid__": "ec58861c-f22a-4666-bcf1-fca7601130c6@f9941",
+      "__uuid__": "2ecc4384-fcbf-4dd3-a8dc-de4c894c7fff@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "d8+/53hWxBjL8xROaTQzfY"
+    "fileId": "78X1CWIuBP5qqDqFT0yZV4"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -166,6 +166,6 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "317cQQllJGz6gUkAOX/pmC"
+    "fileId": "58dkOkd61AR59IqLmVRrMx"
   }
 ]

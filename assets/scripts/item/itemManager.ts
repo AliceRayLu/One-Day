@@ -57,7 +57,8 @@ export class itemManager extends RenderManager {
         if (item.status === itemStatusEnum.Scene) {
             item.status = itemStatusEnum.Inventory
             DataManager.Instance.items = [...DataManager.Instance.items]
-            this.onDestroy()
+        } else if(item.status === itemStatusEnum.Inventory){
+            DataManager.Instance.isSelect = true
         }
     }
 }

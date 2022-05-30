@@ -36,7 +36,7 @@ export class inventoryManager extends RenderManager {
     placeholder: Node = null
 
     render() {
-        this.placeholder.removeAllChildren
+        this.placeholder.destroyAllChildren()
         const isInventoryItem = DataManager.Instance.items.filter(i => i.status === itemStatusEnum.Inventory)
         this.node.active = isInventoryItem.length > 0
         if (isInventoryItem.length) {
@@ -70,15 +70,19 @@ export class inventoryManager extends RenderManager {
             case itemTypeEnum.pic1:
                 const pic1Node = instantiate(this.pic1Prefab)
                 this.placeholder.addChild(pic1Node)
+                break;
             case itemTypeEnum.pic2:
                 const pic2Node = instantiate(this.pic2Prefab)
                 this.placeholder.addChild(pic2Node)
+                break;
             case itemTypeEnum.pic3:
                 const pic3Node = instantiate(this.pic3Prefab)
                 this.placeholder.addChild(pic3Node)
+                break;
             case itemTypeEnum.Maoliang:
                 const MaoliangNode = instantiate(this.MaoliangPrefab)
                 this.placeholder.addChild(MaoliangNode)
+                break;
             default:
                 break;
         }
@@ -86,6 +90,7 @@ export class inventoryManager extends RenderManager {
 
     handleSelect(){
         DataManager.Instance.isSelect = !DataManager.Instance.isSelect
+        
     }
 
     handleLeftbtn(){
@@ -112,9 +117,10 @@ export class inventoryManager extends RenderManager {
         const isInventoryItem = DataManager.Instance.items.filter(i => i.status === itemStatusEnum.Inventory)
         const index = isInventoryItem.findIndex(i=>i.type === DataManager.Instance.curItemType)
         if(index < isInventoryItem.length - 1){
-            DataManager.Instance.isSelect = false
+            //DataManager.Instance.isSelect = false
             DataManager.Instance.curItemType = isInventoryItem[index + 1].type
         } else{
+            //DataManager.Instance.isSelect = false
             DataManager.Instance.curItemType = isInventoryItem[0].type
         }
     }

@@ -1,7 +1,8 @@
 import { itemStatusEnum, itemTypeEnum } from '../enum';
 import Singleton from '../Base/Singleton';
 import EventManager from './EventMnager';
-import { EventEnum } from '../enum/index';
+import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum } from '../enum/index';
+import { teaTriggerMananger } from '../trigger/teaTriggerManager';
 
 interface IItem{
     status: itemStatusEnum
@@ -25,18 +26,49 @@ export default class DataManager extends Singleton{
     ]
 
     private _isSelect = false
+    private _pic1Status: triggerStatusEnum = triggerStatusEnum.empty
+
+    get pic1Status(){
+        return this._pic1Status
+    }
+
+    set pic1Status(newData: triggerStatusEnum){
+        this._pic1Status = newData
+
+        this.render()
+    }
+
+    private _pic2Status: triggerStatusEnum = triggerStatusEnum.empty
+
+    get pic2Status(){
+        return this._pic2Status
+    }
+
+    set pic2Status(newData: triggerStatusEnum){
+        this._pic2Status = newData
+
+        this.render()
+    }
+
+    private _teaStatus: cupTriggerStatusEnum = cupTriggerStatusEnum.cupempty
+
+    get teaStatus(){
+        return this._teaStatus
+    }
+
+    set teaStatus(newData: cupTriggerStatusEnum){
+        this._teaStatus = newData
+
+        this.render()
+    }
 
     get isSelect(){
-        return this.isSelect
+        return this._isSelect
     }
 
     set isSelect(newData: boolean){
         this._isSelect = newData
         this.render()
-    }
-
-    get items(){
-        return this._items
     }
 
     get curItemType(){
@@ -47,6 +79,10 @@ export default class DataManager extends Singleton{
         this._curItemType = newData
 
         this.render()
+    }
+
+    get items(){
+        return this._items
     }
 
     set items(newData: IItem[]){

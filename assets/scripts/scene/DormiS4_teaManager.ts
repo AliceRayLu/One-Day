@@ -6,10 +6,8 @@ import { pic2TriggerMananger } from '../trigger/pic2TriggerMananger';
 import { pic1Manager } from '../item/pic1Manager';
 const { ccclass, property } = _decorator;
 
-@ccclass('DormiS4_1Manager')
-export class DormiS4_1Manager extends SceneManager {
+@ccclass('DormiS4_teaManager')
+export class DormiS4_teaManager extends SceneManager {
    
     
-      
 }
-

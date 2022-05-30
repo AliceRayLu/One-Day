@@ -12,15 +12,41 @@ export class DormiS2Manager extends SceneManager {
     @property(Node)
     pic1Placeholder: Node = null
 
+    @property(Prefab)
+    pic2Prefab: Prefab = null
+
+    @property(Node)
+    pic2Placeholder: Node = null
+
+    @property(Prefab)
+    pic3Prefab: Prefab = null
+
+    @property(Node)
+    pic3Placeholder: Node = null
+
     render(){
         super.render()
-        this.items.removeAllChildren
+        this.items.destroyAllChildren()
 
-        const Chahu = DataManager.Instance.items.find(i=>i.type === itemTypeEnum.Chahu)
-        if(Chahu && Chahu.status === itemStatusEnum.Scene){
-            const ChahuNode = instantiate(this.pic1Prefab)
-            this.items.addChild(ChahuNode)
-            ChahuNode.setPosition(this.pic1Placeholder.position)
+        const pic1 = DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1)
+        if(pic1 && pic1.status === itemStatusEnum.Scene){
+            const pic1Node = instantiate(this.pic1Prefab)
+            this.items.addChild(pic1Node)
+            pic1Node.setPosition(this.pic1Placeholder.position)
+        }
+
+        const pic2 = DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2)
+        if(pic2 && pic2.status === itemStatusEnum.Scene){
+            const pic2Node = instantiate(this.pic2Prefab)
+            this.items.addChild(pic2Node)
+            pic2Node.setPosition(this.pic2Placeholder.position)
+        }
+
+        const pic3 = DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3)
+        if(pic3 && pic3.status === itemStatusEnum.Scene){
+            const pic3Node = instantiate(this.pic3Prefab)
+            this.items.addChild(pic3Node)
+            pic3Node.setPosition(this.pic3Placeholder.position)
         }
 
     }

@@ -9,6 +9,7 @@ export enum Sceneenum{
     DormiS2_2_2 = "DormiS2_2_2",
     DormiS4_1 = "DormiS4_1",
     DormiS4_2 = "DormiS4_2",
+    DormiS4_tea = "DormiS4_tea",
 }
 
 export enum itemStatusEnum{
@@ -28,4 +29,21 @@ export enum itemTypeEnum{
 
 export enum EventEnum{
     Render = "Render"
+}
+
+export enum triggerTypeEnum{
+    pic1trigger = "pic1trigger",
+    pic2trigger = "pic1trigger",
+    teatrigger = "teatrigger"
+}
+
+export enum triggerStatusEnum{
+    empty = "empty",
+    match = "match",
+}
+
+export enum cupTriggerStatusEnum{
+    cupempty = "cupempty",
+    water = "water",
+    tea = "tea"
 }

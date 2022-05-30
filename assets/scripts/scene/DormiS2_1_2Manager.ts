@@ -15,7 +15,7 @@ export class DormiS2_1_2Manager extends SceneManager {
 
     render(){
         super.render()
-        this.items.removeAllChildren
+        this.items.destroyAllChildren()
 
         const Chahu = DataManager.Instance.items.find(i=>i.type === itemTypeEnum.Chahu)
         if(Chahu && Chahu.status === itemStatusEnum.Scene){

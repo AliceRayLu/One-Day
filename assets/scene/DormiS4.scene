@@ -29,7 +29,7 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 35
+      "__id__": 37
     },
     "_id": "ccad96fa-6aaa-44b4-a6dd-0564e01b43d9"
   },
@@ -232,21 +232,24 @@
       },
       {
         "__id__": 27
+      },
+      {
+        "__id__": 31
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 31
-      },
-      {
-        "__id__": 32
-      },
-      {
         "__id__": 33
       },
       {
         "__id__": 34
+      },
+      {
+        "__id__": 35
+      },
+      {
+        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1113,6 +1116,70 @@
     "customEventData": "DormiS4_1"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "items",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 7
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 32
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "d0ToqtawxI2INbROLbOWOk"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 31
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 100,
+      "height": 100
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_id": "edvf8q8NRNt6jErBnaMlwn"
+  },
+  {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
@@ -1186,24 +1253,31 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "inventory": {
+      "__uuid__": "7f2d0903-4776-4ced-b493-ca05fbf4f671",
+      "__expectedType__": "cc.Prefab"
+    },
+    "items": {
+      "__id__": 31
+    },
     "_id": "1f8s8SUWRLoY5ZfFf7jUsD"
   },
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 36
-    },
-    "shadows": {
-      "__id__": 37
-    },
-    "_skybox": {
       "__id__": 38
     },
-    "fog": {
+    "shadows": {
       "__id__": 39
     },
-    "octree": {
+    "_skybox": {
       "__id__": 40
+    },
+    "fog": {
+      "__id__": 41
+    },
+    "octree": {
+      "__id__": 42
     }
   },
   {

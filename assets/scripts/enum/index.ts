@@ -9,10 +9,23 @@ export enum Sceneenum{
     DormiS2_2_2 = "DormiS2_2_2",
     DormiS4_1 = "DormiS4_1",
     DormiS4_2 = "DormiS4_2",
-    DiningS1 = "DiningS1",
-    DiningS2 = "DiningS2",
-    ClassS1 = "ClassS1",
-    ClassS2 = "ClassS2",
-    ActS1 = "ActS1",
-    ACtS2 = "ActS2",
+}
+
+export enum itemStatusEnum{
+    Scene = "Scene",
+    Inventory = "Inventory",
+    Disable = "Disable",
+}
+
+export enum itemTypeEnum{
+    Chahu = "Chahu",
+    Maoliang = "Maoliang",
+    pic1 = "pic1",
+    pic2 = "pic2",
+    pic3 = "pic3",
+    Chaye = "Chaye"
+}
+
+export enum EventEnum{
+    Render = "Render"
 }

@@ -45,7 +45,9 @@ export enum triggerTypeEnum{
 
 export enum triggerStatusEnum{
     empty = "empty",
-    match = "match",
+    pic1 = "pic1",
+    pic2 = "pic2",
+    pic3 = "pic3",
 }
 
 export enum cupTriggerStatusEnum{

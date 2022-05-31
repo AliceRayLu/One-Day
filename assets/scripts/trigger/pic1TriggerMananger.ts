@@ -13,23 +13,53 @@ export class pic1TriggerMananger extends triggerManager {
     empty: Node = null
 
     @property(Node)
-    match: Node = null
+    pic1: Node = null
+
+    @property(Node)
+    pic2: Node = null
+
+    @property(Node)
+    pic3: Node = null
 
     handleTrigger(){
         if(DataManager.Instance.curItemType === itemTypeEnum.pic1 && DataManager.Instance.isSelect){
             DataManager.Instance.curItemType = null
             DataManager.Instance.isSelect = false
-            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Disable
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Scene
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2).status = itemStatusEnum.Inventory
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Inventory
             DataManager.Instance.items = [...DataManager.Instance.items]
-            DataManager.Instance.pic1Status = triggerStatusEnum.match
+            DataManager.Instance.pic1Status = triggerStatusEnum.pic1
+        }
+        if(DataManager.Instance.curItemType === itemTypeEnum.pic2 && DataManager.Instance.isSelect){
+            DataManager.Instance.curItemType = null
+            DataManager.Instance.isSelect = false
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2).status = itemStatusEnum.Scene
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Inventory
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Inventory
+            DataManager.Instance.items = [...DataManager.Instance.items]
+            DataManager.Instance.pic1Status = triggerStatusEnum.pic2
+        }
+        if(DataManager.Instance.curItemType === itemTypeEnum.pic3 && DataManager.Instance.isSelect){
+            DataManager.Instance.curItemType = null
+            DataManager.Instance.isSelect = false
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Scene
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2).status = itemStatusEnum.Inventory
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Inventory
+            DataManager.Instance.items = [...DataManager.Instance.items]
+            DataManager.Instance.pic1Status = triggerStatusEnum.pic3
         }
     }
 
     render(){
         super.render()
-        const ismatch = DataManager.Instance.pic1Status === triggerStatusEnum.match
-        this.empty.active = !ismatch
-        this.match.active = ismatch
+        const ispic1 = DataManager.Instance.pic1Status === triggerStatusEnum.pic1
+        const ispic2 = DataManager.Instance.pic1Status === triggerStatusEnum.pic2
+        const ispic3 = DataManager.Instance.pic1Status === triggerStatusEnum.pic3
+        this.empty.active = !ispic1 && !ispic2 && !ispic3
+        this.pic1.active = ispic1
+        this.pic2.active = ispic2
+        this.pic3.active = ispic3
     }
 
 }

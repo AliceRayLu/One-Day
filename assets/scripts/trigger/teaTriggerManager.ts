@@ -27,7 +27,7 @@ export class teaTriggerMananger extends triggerManager {
             DataManager.Instance.teaStatus = cupTriggerStatusEnum.water
             
         }
-        if(DataManager.Instance.curItemType === itemTypeEnum.Chaye && DataManager.Instance.isSelect){
+        if(DataManager.Instance.curItemType === itemTypeEnum.Chaye && DataManager.Instance.isSelect && DataManager.Instance.teaStatus === cupTriggerStatusEnum.water){
             DataManager.Instance.curItemType = null
             DataManager.Instance.isSelect = false
             DataManager.Instance.items.find(i=>i.type === itemTypeEnum.Chaye).status = itemStatusEnum.Disable

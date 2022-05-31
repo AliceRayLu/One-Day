@@ -10,6 +10,12 @@ export enum Sceneenum{
     DormiS4_1 = "DormiS4_1",
     DormiS4_2 = "DormiS4_2",
     DormiS4_tea = "DormiS4_tea",
+    DormiS2_alarm="DormiS2_alarm",
+    Act_clock="Act_clock",
+    Lib_clock="Lib_clock",
+    DiningS1_clock="DiningS1_clock",
+    DormiS1_Open="DormiS1_Open",
+    DiningS2_Open="DiningS2_Open",
 }
 
 export enum itemStatusEnum{

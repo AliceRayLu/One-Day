@@ -7,12 +7,6 @@ const COM=new common()
 
 @ccclass('ActClockManager')
 export class ActClockManager extends SceneManager {
-    start() {
-        
-    }
-
-    update(deltaTime: number) {
-        
-    }
+    
 }
 

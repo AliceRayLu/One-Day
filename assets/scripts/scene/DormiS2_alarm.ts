@@ -1,4 +1,5 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, director } from 'cc';
+import { SceneManager } from './SceneManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('DormiS2_alarm')
@@ -24,7 +25,7 @@ export class DormiS2_alarm extends Component {
     }
 
     finish(){
-        console.debug('horayyy')
+        director.loadScene("DormiS2_maoliang")
     }
 
 

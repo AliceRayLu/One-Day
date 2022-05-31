@@ -11,8 +11,6 @@ export class DormiS4_1Manager extends SceneManager {
    change_node(){
        if(DataManager.Instance.pic1Status === triggerStatusEnum.pic1 && 
         DataManager.Instance.pic2Status === triggerStatusEnum.pic3){
-            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Disable
-            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Disable
             director.loadScene("DormiS4_2")
         }
    }

@@ -4,12 +4,6 @@ const { ccclass, property } = _decorator;
 
 @ccclass('ActS1Manager')
 export class ActS1Manager extends SceneManager {
-    start() {
-
-    }
-
-    update(deltaTime: number) {
-        
-    }
+    
 }
 

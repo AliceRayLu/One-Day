@@ -12,10 +12,11 @@ export enum Sceneenum{
     DormiS4_tea = "DormiS4_tea",
     DormiS2_alarm="DormiS2_alarm",
     Act_clock="Act_clock",
-    Lib_clock="Lib_clock",
+    ClassS2_clock="ClassS2_clock",
     DiningS1_clock="DiningS1_clock",
     DormiS1_Open="DormiS1_Open",
     DiningS2_Open="DiningS2_Open",
+    DormiS3_maomao = "DormiS3_maomao",
 }
 
 export enum itemStatusEnum{
@@ -40,7 +41,8 @@ export enum EventEnum{
 export enum triggerTypeEnum{
     pic1trigger = "pic1trigger",
     pic2trigger = "pic1trigger",
-    teatrigger = "teatrigger"
+    teatrigger = "teatrigger",
+    maoliangtrigger = "maoliangtrigger"
 }
 
 export enum triggerStatusEnum{
@@ -54,4 +56,10 @@ export enum cupTriggerStatusEnum{
     cupempty = "cupempty",
     water = "water",
     tea = "tea"
+}
+
+export enum maoliangTriggerEnum{
+    empty = "empty",
+    maoliang = "maoliang",
+    xiaoshi = "xiaoshi"
 }

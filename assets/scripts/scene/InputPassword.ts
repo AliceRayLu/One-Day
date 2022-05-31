@@ -1,5 +1,6 @@
 import { _decorator, Component, Node, EditBox, director, labelAssembler, Label } from 'cc';
 import { Sceneenum } from '../enum/index';
+import { SceneManager } from './SceneManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('InputPassword')

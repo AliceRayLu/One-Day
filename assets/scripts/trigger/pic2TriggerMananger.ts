@@ -25,21 +25,39 @@ export class pic2TriggerMananger extends triggerManager {
         if(DataManager.Instance.curItemType === itemTypeEnum.pic1 && DataManager.Instance.isSelect){
             DataManager.Instance.curItemType = null
             DataManager.Instance.isSelect = false
-            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Scene
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Disable
+            if(DataManager.Instance.pic1Status != triggerStatusEnum.pic2) {
+                DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2).status = itemStatusEnum.Inventory
+            }
+            if(DataManager.Instance.pic1Status != triggerStatusEnum.pic3) {
+                DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Inventory
+            }
             DataManager.Instance.items = [...DataManager.Instance.items]
             DataManager.Instance.pic2Status = triggerStatusEnum.pic1
         }
         if(DataManager.Instance.curItemType === itemTypeEnum.pic2 && DataManager.Instance.isSelect){
             DataManager.Instance.curItemType = null
             DataManager.Instance.isSelect = false
-            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2).status = itemStatusEnum.Scene
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2).status = itemStatusEnum.Disable
+            if(DataManager.Instance.pic1Status != triggerStatusEnum.pic1) {
+                DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Inventory
+            }
+            if(DataManager.Instance.pic1Status != triggerStatusEnum.pic3) {
+                DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Inventory
+            }
             DataManager.Instance.items = [...DataManager.Instance.items]
             DataManager.Instance.pic2Status = triggerStatusEnum.pic2
         }
         if(DataManager.Instance.curItemType === itemTypeEnum.pic3 && DataManager.Instance.isSelect){
             DataManager.Instance.curItemType = null
             DataManager.Instance.isSelect = false
-            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Scene
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic3).status = itemStatusEnum.Disable
+            if(DataManager.Instance.pic1Status != triggerStatusEnum.pic2) {
+                DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic2).status = itemStatusEnum.Inventory
+            }
+            if(DataManager.Instance.pic1Status != triggerStatusEnum.pic1) {
+                DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic1).status = itemStatusEnum.Inventory
+            }
             DataManager.Instance.items = [...DataManager.Instance.items]
             DataManager.Instance.pic2Status = triggerStatusEnum.pic3
         }

@@ -1,7 +1,7 @@
 import { itemStatusEnum, itemTypeEnum } from '../enum';
 import Singleton from '../Base/Singleton';
 import EventManager from './EventMnager';
-import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum } from '../enum/index';
+import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum } from '../enum/index';
 import { teaTriggerMananger } from '../trigger/teaTriggerManager';
 
 interface IItem{
@@ -46,6 +46,18 @@ export default class DataManager extends Singleton{
 
     set pic2Status(newData: triggerStatusEnum){
         this._pic2Status = newData
+
+        this.render()
+    }
+
+    private _maoliangstatus: maoliangTriggerEnum = maoliangTriggerEnum.empty
+
+    get maoliangstatus(){
+        return this._maoliangstatus
+    }
+
+    set maoliangstatus(newData: maoliangTriggerEnum){
+        this._maoliangstatus = newData
 
         this.render()
     }

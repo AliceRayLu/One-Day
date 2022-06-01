@@ -42,7 +42,8 @@ export enum triggerTypeEnum{
     pic1trigger = "pic1trigger",
     pic2trigger = "pic1trigger",
     teatrigger = "teatrigger",
-    maoliangtrigger = "maoliangtrigger"
+    maoliangtrigger = "maoliangtrigger",
+    panzitrigger = "panzitrigger",
 }
 
 export enum triggerStatusEnum{
@@ -62,4 +63,14 @@ export enum maoliangTriggerEnum{
     empty = "empty",
     maoliang = "maoliang",
     xiaoshi = "xiaoshi"
+}
+
+export enum panziTriggerEnum{
+    empty = "empty",
+    mianbao = "mianbao",
+    cai = "cai",
+    meat = "meat",
+    cheese = "cheese",
+    tomato = "tomato",
+    sandwitch = "sandwitch"
 }

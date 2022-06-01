@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "Lib_clock",
+    "_name": "ClassS2_clock",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -1092,7 +1092,7 @@
       "__id__": 7
     },
     "component": "",
-    "_componentId": "ec6a9g+CvpNsJUHKeGLLa3G",
+    "_componentId": "07fb3obvntECa4/+5s/knIC",
     "handler": "ChangeScene",
     "customEventData": "ClassS2"
   },
@@ -1226,7 +1226,7 @@
     "_id": "df7BJvnxFKZKhJmW5jUYIz"
   },
   {
-    "__type__": "ec6a9g+CvpNsJUHKeGLLa3G",
+    "__type__": "07fb3obvntECa4/+5s/knIC",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1234,14 +1234,9 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "inventory": {
-      "__uuid__": "7f2d0903-4776-4ced-b493-ca05fbf4f671",
-      "__expectedType__": "cc.Prefab"
-    },
-    "items": {
-      "__id__": 31
-    },
-    "_id": "5am7UGGWRMTreyjPHo+aXl"
+    "inventory": null,
+    "items": null,
+    "_id": "5f5kPE2HVOOqpQoLCRUh3O"
   },
   {
     "__type__": "cc.SceneGlobals",

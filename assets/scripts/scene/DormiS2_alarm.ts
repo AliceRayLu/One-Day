@@ -12,13 +12,13 @@ export class DormiS2_alarm extends Component {
     }
     rotateThing0(){
         this.node.children[0].setRotationFromEuler(this.node.children[0].eulerAngles.x, this.node.children[0].eulerAngles.y, this.node.children[0].eulerAngles.z-30);
-        if(this.node.children[0].eulerAngles.z==60&&this.node.children[1].eulerAngles.z==-90){
+        if(this.node.children[0].eulerAngles.z%360==60&&this.node.children[1].eulerAngles.z%360==-90){
             this.node.emit('done')
         }
     }
     rotateThing1(){
         this.node.children[1].setRotationFromEuler(this.node.children[1].eulerAngles.x, this.node.children[1].eulerAngles.y, this.node.children[1].eulerAngles.z-30);
-        if(this.node.children[0].eulerAngles.z==60&&this.node.children[1].eulerAngles.z==-90){
+        if(this.node.children[0].eulerAngles.z%360==60&&this.node.children[1].eulerAngles.z%360==-90){
             this.node.emit('done')
         }
         

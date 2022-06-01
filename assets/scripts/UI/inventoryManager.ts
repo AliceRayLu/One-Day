@@ -45,12 +45,12 @@ export class inventoryManager extends RenderManager {
                 if (item.status === itemStatusEnum.Inventory) {
                     this.generateItem(DataManager.Instance.curItemType)
                 } else {
-                    const type = isInventoryItem[isInventoryItem.length - 1].type
+                    const type = isInventoryItem[0].type
                     this.generateItem(type)
                     DataManager.Instance.curItemType = type
                 }
             } else {
-                const type = isInventoryItem[isInventoryItem.length - 1].type
+                const type = isInventoryItem[0].type
                 this.generateItem(type)
                 DataManager.Instance.curItemType = type
             }

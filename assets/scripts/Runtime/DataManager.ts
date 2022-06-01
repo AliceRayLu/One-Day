@@ -24,7 +24,7 @@ export default class DataManager extends Singleton{
         {type: itemTypeEnum.pic3, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.Chaye, status: itemStatusEnum.Scene},
     ]
-
+  
     private _isSelect = false
     private _pic1Status: triggerStatusEnum = triggerStatusEnum.empty
 

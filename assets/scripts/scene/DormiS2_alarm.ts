@@ -28,8 +28,6 @@ export class DormiS2_alarm extends Component {
         director.loadScene("DormiS2_maoliang")
     }
 
-
-
     update(deltaTime: number) {
         
     }

@@ -14,6 +14,19 @@ export class SceneManager extends RenderManager {
 
     start(){
         super.start()
+        director.preloadScene("DormiS1")
+        director.preloadScene("DormiS2")
+        director.preloadScene("DormiS3")
+        director.preloadScene("DormiS4")
+        director.preloadScene("DormiS2_1")
+        director.preloadScene("DormiS2_1_2")
+        director.preloadScene("DormiS2_2")
+        director.preloadScene("DormiS2_2_2")
+        director.preloadScene("DormiS4_1")
+        director.preloadScene("DormiS4_2")
+        director.preloadScene("DormiS4_tea")
+        director.preloadScene("DormiS2_alarm")
+        //director.preloadScene("Act_clock")
 
         if(this.inventory){
             const inventory = instantiate(this.inventory)

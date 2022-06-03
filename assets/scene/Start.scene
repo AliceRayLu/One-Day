@@ -746,6 +746,8 @@
     "__prefab": null,
     "inventory": null,
     "items": null,
+    "todolistPrefab": null,
+    "todolistPlaceholder": null,
     "_id": "b7p4JhpP1HxbhUmKfVIIdG"
   },
   {

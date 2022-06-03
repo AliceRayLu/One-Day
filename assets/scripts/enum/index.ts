@@ -19,7 +19,10 @@ export enum Sceneenum{
     DiningS2_Open="DiningS2_Open",
     DormiS3_maomao = "DormiS3_maomao",
     DormiS4_card = "DormiS4_card",
-    DiningS1_clock_list = "DiningS1_clock_list"
+    DiningS1_clock_list = "DiningS1_clock_list",
+    Act_piano="Act_piano",
+    Act_dance="Act_dance",
+    DormiS4_3="DormiS4_3"
 }
 
 export enum itemStatusEnum{

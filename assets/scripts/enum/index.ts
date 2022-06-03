@@ -22,7 +22,8 @@ export enum Sceneenum{
     DiningS1_clock_list = "DiningS1_clock_list",
     Act_piano="Act_piano",
     Act_dance="Act_dance",
-    DormiS4_3="DormiS4_3"
+    DormiS4_3="DormiS4_3",
+    DiningS2_card = "DiningS2_card"
 }
 
 export enum itemStatusEnum{
@@ -57,7 +58,8 @@ export enum triggerTypeEnum{
     teatrigger = "teatrigger",
     maoliangtrigger = "maoliangtrigger",
     panzitrigger = "panzitrigger",
-    wuzitrigger = "wuzitrigger"
+    wuzitrigger = "wuzitrigger",
+    shuakatrigger = "shuakatrigger"
 }
 
 export enum triggerStatusEnum{
@@ -94,4 +96,9 @@ export enum panziTriggerEnum{
 export enum wuziTriggerEnum{
     empty = "empty",
     Sprite ="Sprite"
+}
+
+export enum shuakaTriggerEnum{
+    shuaka = "shuaka",
+    money = "money"
 }

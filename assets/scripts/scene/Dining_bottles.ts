@@ -1,4 +1,4 @@
-import { _decorator, Component, Node ,find} from 'cc';
+import { _decorator, Component, Node, find, director } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('Dining_bottles')
@@ -46,7 +46,7 @@ export class Dining_bottles extends Component {
         return true
     }
     finish(){
-        //加载下一个场景
+        director.loadScene("DiningS2_card")
     }
     update(deltaTime: number) {
         

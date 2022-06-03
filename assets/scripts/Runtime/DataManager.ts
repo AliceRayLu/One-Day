@@ -1,4 +1,4 @@
-import { itemStatusEnum, itemTypeEnum, wuziTriggerEnum } from '../enum';
+import { itemStatusEnum, itemTypeEnum, shuakaTriggerEnum, wuziTriggerEnum } from '../enum';
 import Singleton from '../Base/Singleton';
 import EventManager from './EventMnager';
 import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum } from '../enum/index';
@@ -89,6 +89,18 @@ export default class DataManager extends Singleton{
 
     set wuziStatus(newData: wuziTriggerEnum){
         this._wuziStatus = newData
+
+        this.render()
+    }
+
+    private _shuakaStatus: shuakaTriggerEnum = shuakaTriggerEnum.shuaka
+
+    get shuakaStatus(){
+        return this._shuakaStatus
+    }
+
+    set shuakaStatus(newData: shuakaTriggerEnum){
+        this._shuakaStatus = newData
 
         this.render()
     }

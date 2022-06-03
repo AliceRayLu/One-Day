@@ -26,6 +26,7 @@
     ],
     "_active": true,
     "_components": [],
+    "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
       "__id__": 145
@@ -4506,7 +4507,7 @@
       "x": 0.5176470588235293,
       "y": 0.6274509803921569,
       "z": 0.9019607843137255,
-      "w": 1
+      "w": 0.5208
     },
     "_skyIllumLDR": 0.5208,
     "_groundAlbedoLDR": {

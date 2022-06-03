@@ -18,7 +18,8 @@ export enum Sceneenum{
     DormiS1_Open="DormiS1_Open",
     DiningS2_Open="DiningS2_Open",
     DormiS3_maomao = "DormiS3_maomao",
-    DormiS4_card = "DormiS4_card"
+    DormiS4_card = "DormiS4_card",
+    DiningS1_clock_list = "DiningS1_clock_list"
 }
 
 export enum itemStatusEnum{
@@ -33,10 +34,14 @@ export enum itemTypeEnum{
     pic1 = "pic1",
     pic2 = "pic2",
     pic3 = "pic3",
+    pic4 = "pic4",
+    pic5 = "pic5",
     Chaye = "Chaye",
     todolist = "todolist",
     tuoba = "tuoba",
-    card = "card"
+    card = "card",
+    list = "list",
+    yinliao = "yinliao"
 }
 
 export enum EventEnum{
@@ -57,6 +62,8 @@ export enum triggerStatusEnum{
     pic1 = "pic1",
     pic2 = "pic2",
     pic3 = "pic3",
+    pic4 = "pic4",
+    pic5 = "pic5",
 }
 
 export enum cupTriggerStatusEnum{

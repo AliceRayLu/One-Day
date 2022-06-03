@@ -22,10 +22,14 @@ export default class DataManager extends Singleton{
         {type: itemTypeEnum.pic1, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.pic2, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.pic3, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.pic4, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.pic5, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.Chaye, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.todolist, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.yinliao, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.tuoba, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.card, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.list, status: itemStatusEnum.Scene},
     ]
   
     private _isSelect = false

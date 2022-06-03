@@ -24,6 +24,18 @@ export class DormiS2Manager extends SceneManager {
     @property(Node)
     pic3Placeholder: Node = null
 
+    @property(Prefab)
+    pic4Prefab: Prefab = null
+
+    @property(Node)
+    pic4Placeholder: Node = null
+
+    @property(Prefab)
+    pic5Prefab: Prefab = null
+
+    @property(Node)
+    pic5Placeholder: Node = null
+
     render(){
         super.render()
         this.items.destroyAllChildren()
@@ -47,6 +59,20 @@ export class DormiS2Manager extends SceneManager {
             const pic3Node = instantiate(this.pic3Prefab)
             this.items.addChild(pic3Node)
             pic3Node.setPosition(this.pic3Placeholder.position)
+        }
+
+        const pic4 = DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic4)
+        if(pic4 && pic4.status === itemStatusEnum.Scene){
+            const pic4Node = instantiate(this.pic4Prefab)
+            this.items.addChild(pic4Node)
+            pic4Node.setPosition(this.pic4Placeholder.position)
+        }
+
+        const pic5 = DataManager.Instance.items.find(i=>i.type === itemTypeEnum.pic5)
+        if(pic5 && pic5.status === itemStatusEnum.Scene){
+            const pic5Node = instantiate(this.pic5Prefab)
+            this.items.addChild(pic5Node)
+            pic5Node.setPosition(this.pic5Placeholder.position)
         }
 
     }

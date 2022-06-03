@@ -24,6 +24,12 @@ export class inventoryManager extends RenderManager {
     pic3Prefab: Prefab = null
 
     @property(Prefab)
+    pic4Prefab: Prefab = null
+
+    @property(Prefab)
+    pic5Prefab: Prefab = null
+
+    @property(Prefab)
     MaoliangPrefab: Prefab = null
 
     @property(Prefab)
@@ -35,6 +41,12 @@ export class inventoryManager extends RenderManager {
     @property(Prefab)
     cardPrefab: Prefab = null
 
+    @property(Prefab)
+    yinliaoPrefab: Prefab = null
+
+    @property(Prefab)
+    listPrefab: Prefab = null
+
     @property(Button)
     leftbtn: Button = null
 
@@ -43,6 +55,8 @@ export class inventoryManager extends RenderManager {
 
     @property(Node)
     placeholder: Node = null
+
+    
 
     render() {
         this.placeholder.destroyAllChildren()
@@ -64,6 +78,7 @@ export class inventoryManager extends RenderManager {
                 DataManager.Instance.curItemType = type
             }
         }
+
     }
 
     generateItem(type: itemTypeEnum) {
@@ -88,6 +103,14 @@ export class inventoryManager extends RenderManager {
                 const pic3Node = instantiate(this.pic3Prefab)
                 this.placeholder.addChild(pic3Node)
                 break;
+            case itemTypeEnum.pic4:
+                const pic4Node = instantiate(this.pic4Prefab)
+                this.placeholder.addChild(pic4Node)
+                break;
+            case itemTypeEnum.pic5:
+                const pic5Node = instantiate(this.pic5Prefab)
+                this.placeholder.addChild(pic5Node)
+                break;   
             case itemTypeEnum.Maoliang:
                 const MaoliangNode = instantiate(this.MaoliangPrefab)
                 this.placeholder.addChild(MaoliangNode)
@@ -103,6 +126,14 @@ export class inventoryManager extends RenderManager {
             case itemTypeEnum.card:
                 const cardNode = instantiate(this.cardPrefab)
                 this.placeholder.addChild(cardNode)
+                break;
+            case itemTypeEnum.yinliao:
+                const yinliaoNode = instantiate(this.yinliaoPrefab)
+                this.placeholder.addChild(yinliaoNode)
+                break;
+            case itemTypeEnum.list:
+                const listNode = instantiate(this.listPrefab)
+                this.placeholder.addChild(listNode)
                 break;
             default:
                 break;
@@ -138,10 +169,10 @@ export class inventoryManager extends RenderManager {
         const isInventoryItem = DataManager.Instance.items.filter(i => i.status === itemStatusEnum.Inventory)
         const index = isInventoryItem.findIndex(i=>i.type === DataManager.Instance.curItemType)
         if(index < isInventoryItem.length - 1){
-            //DataManager.Instance.isSelect = false
+            DataManager.Instance.isSelect = false
             DataManager.Instance.curItemType = isInventoryItem[index + 1].type
         } else{
-            //DataManager.Instance.isSelect = false
+            DataManager.Instance.isSelect = false
             DataManager.Instance.curItemType = isInventoryItem[0].type
         }
     }

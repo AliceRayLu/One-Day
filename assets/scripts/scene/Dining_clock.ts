@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, director } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('Dining_clock')
@@ -27,7 +27,7 @@ export class Dining_clock extends Component {
     }
 
     finish(){
-        console.debug('horayyy')
+        director.loadScene("DiningS1_clock_list")
     }
     update(deltaTime: number) {
         

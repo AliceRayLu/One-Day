@@ -1,4 +1,4 @@
-import { itemStatusEnum, itemTypeEnum } from '../enum';
+import { itemStatusEnum, itemTypeEnum, wuziTriggerEnum } from '../enum';
 import Singleton from '../Base/Singleton';
 import EventManager from './EventMnager';
 import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum } from '../enum/index';
@@ -23,6 +23,9 @@ export default class DataManager extends Singleton{
         {type: itemTypeEnum.pic2, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.pic3, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.Chaye, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.todolist, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.tuoba, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.card, status: itemStatusEnum.Scene},
     ]
   
     private _isSelect = false
@@ -70,6 +73,18 @@ export default class DataManager extends Singleton{
 
     set teaStatus(newData: cupTriggerStatusEnum){
         this._teaStatus = newData
+
+        this.render()
+    }
+
+    private _wuziStatus: wuziTriggerEnum = wuziTriggerEnum.Sprite
+
+    get wuziStatus(){
+        return this._wuziStatus
+    }
+
+    set wuziStatus(newData: wuziTriggerEnum){
+        this._wuziStatus = newData
 
         this.render()
     }

@@ -1160,7 +1160,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "猫粮",
+    "_name": "Sprite",
     "_objFlags": 0,
     "_parent": {
       "__id__": 29
@@ -1178,16 +1178,16 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -100.837,
-      "y": 0.464,
+      "x": -48.936,
+      "y": 63.764,
       "z": 0
     },
     "_lrot": {
       "__type__": "cc.Quat",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": -0.25881904510252074,
+      "w": 0.9659258262890683
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -1200,9 +1200,9 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0
+      "z": -30
     },
-    "_id": "33im2gyEhG9ZH+BT6H9tmf"
+    "_id": "3eb+bktUBIuotyjXKkLjF0"
   },
   {
     "__type__": "cc.UITransform",
@@ -1223,7 +1223,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "10AIN4RRRL5q89Ej+0ssbA"
+    "_id": "caYIFInjRDi5OAmBgEa41R"
   },
   {
     "__type__": "cc.Sprite",
@@ -1246,7 +1246,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "2ecc4384-fcbf-4dd3-a8dc-de4c894c7fff@f9941",
+      "__uuid__": "ece2ff38-6b39-4bfa-afa4-eacd82b42d8c@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -1262,7 +1262,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "f6jBkpaWBHIbLMrU1CmRT+"
+    "_id": "beQ05umWlEOJt/Y5/dCfQu"
   },
   {
     "__type__": "cc.UITransform",

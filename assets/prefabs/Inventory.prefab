@@ -687,6 +687,18 @@
       "__uuid__": "05a3dca6-25ba-4890-a834-17f17182ec0e",
       "__expectedType__": "cc.Prefab"
     },
+    "todolistPrefab": {
+      "__uuid__": "2a54b7ca-b7cc-4ef6-83ca-67d6dd0f8d96",
+      "__expectedType__": "cc.Prefab"
+    },
+    "tuobaPrefab": {
+      "__uuid__": "63a3ddfc-a00a-45a6-be2b-cd864ce12448",
+      "__expectedType__": "cc.Prefab"
+    },
+    "cardPrefab": {
+      "__uuid__": "ee980655-e1fe-43f9-af1a-dcd10ed2f4c2",
+      "__expectedType__": "cc.Prefab"
+    },
     "leftbtn": {
       "__id__": 13
     },

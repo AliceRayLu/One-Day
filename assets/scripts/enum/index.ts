@@ -1,3 +1,4 @@
+import { Sprite } from 'cc';
 export enum Sceneenum{
     DormiS1 = "DormiS1",
     DormiS2 = "DormiS2",
@@ -17,6 +18,7 @@ export enum Sceneenum{
     DormiS1_Open="DormiS1_Open",
     DiningS2_Open="DiningS2_Open",
     DormiS3_maomao = "DormiS3_maomao",
+    DormiS4_card = "DormiS4_card"
 }
 
 export enum itemStatusEnum{
@@ -31,7 +33,10 @@ export enum itemTypeEnum{
     pic1 = "pic1",
     pic2 = "pic2",
     pic3 = "pic3",
-    Chaye = "Chaye"
+    Chaye = "Chaye",
+    todolist = "todolist",
+    tuoba = "tuoba",
+    card = "card"
 }
 
 export enum EventEnum{
@@ -44,6 +49,7 @@ export enum triggerTypeEnum{
     teatrigger = "teatrigger",
     maoliangtrigger = "maoliangtrigger",
     panzitrigger = "panzitrigger",
+    wuzitrigger = "wuzitrigger"
 }
 
 export enum triggerStatusEnum{
@@ -73,4 +79,9 @@ export enum panziTriggerEnum{
     cheese = "cheese",
     tomato = "tomato",
     sandwitch = "sandwitch"
+}
+
+export enum wuziTriggerEnum{
+    empty = "empty",
+    Sprite ="Sprite"
 }

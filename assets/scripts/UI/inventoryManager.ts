@@ -26,6 +26,15 @@ export class inventoryManager extends RenderManager {
     @property(Prefab)
     MaoliangPrefab: Prefab = null
 
+    @property(Prefab)
+    todolistPrefab: Prefab = null
+
+    @property(Prefab)
+    tuobaPrefab: Prefab = null
+
+    @property(Prefab)
+    cardPrefab: Prefab = null
+
     @property(Button)
     leftbtn: Button = null
 
@@ -82,6 +91,18 @@ export class inventoryManager extends RenderManager {
             case itemTypeEnum.Maoliang:
                 const MaoliangNode = instantiate(this.MaoliangPrefab)
                 this.placeholder.addChild(MaoliangNode)
+                break;
+            case itemTypeEnum.todolist:
+                const todolistNode = instantiate(this.todolistPrefab)
+                this.placeholder.addChild(todolistNode)
+                break;
+            case itemTypeEnum.tuoba:
+                const tuobaNode = instantiate(this.tuobaPrefab)
+                this.placeholder.addChild(tuobaNode)
+                break;
+            case itemTypeEnum.card:
+                const cardNode = instantiate(this.cardPrefab)
+                this.placeholder.addChild(cardNode)
                 break;
             default:
                 break;

@@ -23,7 +23,15 @@ export enum Sceneenum{
     Act_piano="Act_piano",
     Act_dance="Act_dance",
     DormiS4_3="DormiS4_3",
-    DiningS2_card = "DiningS2_card"
+    DiningS2_card = "DiningS2_card",
+    ClassS1 = "ClassS1",
+    ClassS2 = "ClassS2",
+    ClassS3 = "ClassS3",
+    ClassS4 = "ClassS4",
+    ClassS3_blackboard1 = "ClassS3_blackboard1",
+    ClassS3_blackboard2 = "ClassS3_blackboard2",
+    ClassS3_blackboard3 = "ClassS3_blackboard3",
+    ClassS3_blackboard4 = "ClassS3_blackboard4",
 }
 
 export enum itemStatusEnum{

@@ -656,6 +656,14 @@
       "__uuid__": "71f8b039-fba0-4450-8730-196e03decb4b",
       "__expectedType__": "cc.Prefab"
     },
+    "chartPrefab": {
+      "__uuid__": "aa15e8b4-52db-4a3f-9f27-ae939cf8770d",
+      "__expectedType__": "cc.Prefab"
+    },
+    "jiandaoPrefab": {
+      "__uuid__": "1ce474b5-35e8-476d-84a8-41d957668c53",
+      "__expectedType__": "cc.Prefab"
+    },
     "leftbtn": {
       "__id__": 11
     },

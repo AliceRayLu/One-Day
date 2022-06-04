@@ -53,7 +53,9 @@ export enum itemTypeEnum{
     tuoba = "tuoba",
     card = "card",
     list = "list",
-    yinliao = "yinliao"
+    yinliao = "yinliao",
+    chart = "chart",
+    jiandao = "jiandao",
 }
 
 export enum EventEnum{

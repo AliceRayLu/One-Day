@@ -47,6 +47,12 @@ export class inventoryManager extends RenderManager {
     @property(Prefab)
     listPrefab: Prefab = null
 
+    @property(Prefab)
+    chartPrefab: Prefab = null
+
+    @property(Prefab)
+    jiandaoPrefab: Prefab = null
+
     @property(Button)
     leftbtn: Button = null
 
@@ -134,6 +140,14 @@ export class inventoryManager extends RenderManager {
             case itemTypeEnum.list:
                 const listNode = instantiate(this.listPrefab)
                 this.placeholder.addChild(listNode)
+                break;
+            case itemTypeEnum.chart:
+                const chartNode = instantiate(this.chartPrefab)
+                this.placeholder.addChild(chartNode)
+                break;
+            case itemTypeEnum.jiandao:
+                const jiandaoNode = instantiate(this.jiandaoPrefab)
+                this.placeholder.addChild(jiandaoNode)
                 break;
             default:
                 break;

@@ -30,6 +30,8 @@ export default class DataManager extends Singleton{
         {type: itemTypeEnum.tuoba, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.card, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.list, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.chart, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.jiandao, status: itemStatusEnum.Scene},
     ]
   
     private _isSelect = false

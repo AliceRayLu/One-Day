@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, director } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('Lib_clock')
@@ -24,7 +24,7 @@ export class Lib_clock extends Component {
     }
 
     finish(){
-        console.debug('horayyy')
+        director.loadScene("ClassS2_clock_chart")
     }
 }
 

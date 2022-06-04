@@ -56,6 +56,7 @@ export enum itemTypeEnum{
     yinliao = "yinliao",
     chart = "chart",
     jiandao = "jiandao",
+    ticket = "ticket",
 }
 
 export enum EventEnum{
@@ -69,7 +70,8 @@ export enum triggerTypeEnum{
     maoliangtrigger = "maoliangtrigger",
     panzitrigger = "panzitrigger",
     wuzitrigger = "wuzitrigger",
-    shuakatrigger = "shuakatrigger"
+    shuakatrigger = "shuakatrigger",
+    EinsteinTrigger = "EinsteinTrigger"
 }
 
 export enum triggerStatusEnum{
@@ -111,4 +113,9 @@ export enum wuziTriggerEnum{
 export enum shuakaTriggerEnum{
     shuaka = "shuaka",
     money = "money"
+}
+
+export enum EinsteinTriggerEnum{
+    empty = "empty",
+    Einstein = "Einstein"
 }

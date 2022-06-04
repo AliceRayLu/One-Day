@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, instantiate, Prefab } from 'cc';
+import { _decorator, Component, Node, instantiate, Prefab, director } from 'cc';
 import { itemStatusEnum, itemTypeEnum } from '../enum';
 import { SceneManager } from './SceneManager';
 import DataManager from '../Runtime/DataManager';
@@ -11,6 +11,7 @@ export class DormiS1Manager extends SceneManager {
 
     @property(Node)
     todolistPlaceholder: Node = null
+
 
 
     render(){

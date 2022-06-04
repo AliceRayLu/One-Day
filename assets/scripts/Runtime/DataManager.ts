@@ -1,7 +1,7 @@
 import { itemStatusEnum, itemTypeEnum, shuakaTriggerEnum, wuziTriggerEnum } from '../enum';
 import Singleton from '../Base/Singleton';
 import EventManager from './EventMnager';
-import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum } from '../enum/index';
+import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum, EinsteinTriggerEnum } from '../enum/index';
 import { teaTriggerMananger } from '../trigger/teaTriggerManager';
 
 interface IItem{
@@ -32,6 +32,7 @@ export default class DataManager extends Singleton{
         {type: itemTypeEnum.list, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.chart, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.jiandao, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.ticket, status: itemStatusEnum.Scene},
     ]
   
     private _isSelect = false
@@ -103,6 +104,18 @@ export default class DataManager extends Singleton{
 
     set shuakaStatus(newData: shuakaTriggerEnum){
         this._shuakaStatus = newData
+
+        this.render()
+    }
+
+    private _Einsteinstatus: EinsteinTriggerEnum = EinsteinTriggerEnum.empty
+
+    get Einsteinstatus(){
+        return this._Einsteinstatus
+    }
+
+    set Einsteinstatus(newData: EinsteinTriggerEnum){
+        this._Einsteinstatus = newData
 
         this.render()
     }

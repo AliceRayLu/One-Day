@@ -53,6 +53,9 @@ export class inventoryManager extends RenderManager {
     @property(Prefab)
     jiandaoPrefab: Prefab = null
 
+    @property(Prefab)
+    ticketPrefab: Prefab = null
+
     @property(Button)
     leftbtn: Button = null
 
@@ -148,6 +151,10 @@ export class inventoryManager extends RenderManager {
             case itemTypeEnum.jiandao:
                 const jiandaoNode = instantiate(this.jiandaoPrefab)
                 this.placeholder.addChild(jiandaoNode)
+                break;
+            case itemTypeEnum.ticket:
+                const ticketNode = instantiate(this.ticketPrefab)
+                this.placeholder.addChild(ticketNode)
                 break;
             default:
                 break;

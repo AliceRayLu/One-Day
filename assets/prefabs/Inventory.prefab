@@ -664,6 +664,10 @@
       "__uuid__": "1ce474b5-35e8-476d-84a8-41d957668c53",
       "__expectedType__": "cc.Prefab"
     },
+    "ticketPrefab": {
+      "__uuid__": "b1dae275-c165-4b73-8725-7b37bacd453f",
+      "__expectedType__": "cc.Prefab"
+    },
     "leftbtn": {
       "__id__": 11
     },

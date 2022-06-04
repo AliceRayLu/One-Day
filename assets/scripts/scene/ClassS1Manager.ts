@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, director } from 'cc';
 import { itemTypeEnum, itemStatusEnum} from '../enum';
 import DataManager from '../Runtime/DataManager';
 import { SceneManager } from './SceneManager';
@@ -11,6 +11,8 @@ export class ClassS1Manager extends SceneManager {
 
     @property(Node)
     jiandaoPlaceholder: Node = null
+
+
 
     render(){
         super.render()

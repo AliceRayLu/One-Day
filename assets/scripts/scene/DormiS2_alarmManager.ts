@@ -6,9 +6,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('DormiS2_alarmManager')
 export class DormiS2_alarmManager extends SceneManager {
-    start() {
-        super.start()
-    }
+
     onLoad(){
         var _node=find("Canvas/闹钟-001")
         var script=find('AlarmRoot').getComponent('AlarmRootManager')

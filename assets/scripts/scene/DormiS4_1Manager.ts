@@ -8,6 +8,8 @@ const { ccclass, property } = _decorator;
 
 @ccclass('DormiS4_1Manager')
 export class DormiS4_1Manager extends SceneManager {
+
+
    change_node(){
        if(DataManager.Instance.pic1Status === triggerStatusEnum.pic1 && 
         DataManager.Instance.pic2Status === triggerStatusEnum.pic3){

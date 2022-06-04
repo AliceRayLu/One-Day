@@ -8,6 +8,7 @@ const { ccclass, property } = _decorator;
 export class DormiS3Manager extends SceneManager {
 
 
+
     change_node(){
         if(DataManager.Instance.maoliangstatus === maoliangTriggerEnum.maoliang || 
             DataManager.Instance.maoliangstatus === maoliangTriggerEnum.xiaoshi){

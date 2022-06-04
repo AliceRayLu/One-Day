@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, director } from 'cc';
 const { ccclass, property } = _decorator;
 export const Sleep = (ms)=> {
     return new Promise(resolve=>setTimeout(resolve, ms))
@@ -131,17 +131,21 @@ export class Act_dancers extends Component {
         this.node.children[0].setPosition(this.node.children[0].getPosition().x,this.node.children[0].getPosition().y+20)
         this.node.children[0].active=true
     }
-    addleft(){
+    async addleft(){
+        await Sleep(1700)
         this.arr.push(1)
         this.check()
     }
-    addright(){
+    async addright(){
+        await Sleep(1700)
         this.arr.push(2)
     }
-    addup(){
+    async addup(){
+        await Sleep(1700)
         this.arr.push(3)
     }
-    adddown(){
+    async adddown(){
+        await Sleep(1700)
         this.arr.push(4)
     }
     check(){
@@ -162,7 +166,7 @@ export class Act_dancers extends Component {
         return true
     }
     finish(){
-        //加载下一场景
+        director.loadScene("finish")
     }
     update(deltaTime: number) {
         

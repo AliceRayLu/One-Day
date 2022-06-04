@@ -1,54 +1,57 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, director } from 'cc';
 const { ccclass, property } = _decorator;
-
+export const Sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
 @ccclass('Act_keys')
 export class Act_keys extends Component {
-    arr:number[]=[]
-    ans:number[]=[3,1,15,3,5,4,3]
+    arr: number[] = []
+    ans: number[] = [3, 1, 15, 3, 5, 4, 3]
     start() {
 
     }
-    do(){
+    do() {
         this.arr.push(1)
     }
-    mi(){
+    async mi() {
         this.arr.push(3)
         this.check()
     }
-    fa(){
+    fa() {
+
         this.arr.push(4)
     }
-    so(){
+    so() {
         this.arr.push(5)
     }
-    lowso(){
+    lowso() {
         this.arr.push(15)
     }
-    other(){
+    other() {
         this.arr.push(2)
     }
-    check(){
-        if(this.compare()){
+    check() {
+        if (this.compare()) {
             this.finish()
         }
     }
-    compare(){
-        if (this.arr.length!=this.ans.length){
+    compare() {
+        if (this.arr.length != this.ans.length) {
             return false
-        }else{
-            for(let i=0;i<this.arr.length;i++){
-                if(this.arr[i]!=this.ans[i]){
+        } else {
+            for (let i = 0; i < this.arr.length; i++) {
+                if (this.arr[i] != this.ans[i]) {
                     return false
                 }
             }
         }
         return true
     }
-    finish(){
-
+    finish() {
+        director.loadScene("ActS2_chakefu")
     }
     update(deltaTime: number) {
-        
+
     }
 }
 

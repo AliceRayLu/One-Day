@@ -12,7 +12,7 @@ export class Dining_clock extends Component {
     rotateThing0(){
         this.node.children[0].setRotationFromEuler(this.node.children[0].eulerAngles.x, this.node.children[0].eulerAngles.y, this.node.children[0].eulerAngles.z-30);
         //console.debug('dfs')
-        if(this.node.children[0].eulerAngles.z%360==0&&this.node.children[1].eulerAngles.z%360==180){
+        if(this.node.children[0].eulerAngles.z%360==0&&this.node.children[1].eulerAngles.z%360==210){
             this.node.emit('done')
         }
     }
@@ -20,7 +20,7 @@ export class Dining_clock extends Component {
         this.node.children[1].setRotationFromEuler(this.node.children[1].eulerAngles.x, this.node.children[1].eulerAngles.y, this.node.children[1].eulerAngles.z-30);
         //console.debug('dfs')
 
-        if(this.node.children[0].eulerAngles.z%360==0&&this.node.children[1].eulerAngles.z%360==180){
+        if(this.node.children[0].eulerAngles.z%360==0&&this.node.children[1].eulerAngles.z%360==210){
             this.node.emit('done')
         }
         

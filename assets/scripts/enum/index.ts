@@ -13,6 +13,7 @@ export enum Sceneenum{
     DormiS4_tea = "DormiS4_tea",
     DormiS2_alarm="DormiS2_alarm",
     Act_clock="Act_clock",
+    Act_clock_huochai="Act_clock_huochai",
     ClassS2_clock="ClassS2_clock",
     DiningS1_clock="DiningS1_clock",
     DormiS1_Open="DormiS1_Open",
@@ -32,6 +33,9 @@ export enum Sceneenum{
     ClassS3_blackboard2 = "ClassS3_blackboard2",
     ClassS3_blackboard3 = "ClassS3_blackboard3",
     ClassS3_blackboard4 = "ClassS3_blackboard4",
+    ActS2_chakefu = "ActS2_chakefu",
+    finish = "finish",
+    finish_2 = "finish_2"
 }
 
 export enum itemStatusEnum{
@@ -57,6 +61,7 @@ export enum itemTypeEnum{
     chart = "chart",
     jiandao = "jiandao",
     ticket = "ticket",
+    huochai = "huochai"
 }
 
 export enum EventEnum{
@@ -72,7 +77,8 @@ export enum triggerTypeEnum{
     wuzitrigger = "wuzitrigger",
     shuakatrigger = "shuakatrigger",
     EinsteinTrigger = "EinsteinTrigger",
-    Class_doorTrigger = "Class_doorTrigger"
+    Class_doorTrigger = "Class_doorTrigger",
+    chakefuTrigger = "chakefuTrigger"
 }
 
 export enum triggerStatusEnum{
@@ -124,4 +130,9 @@ export enum EinsteinTriggerEnum{
 export enum Class_doorTriggerEnum{
     empty = "empty",
     open = "open"
+}
+
+export enum chakefuTriggerEnum{
+    chakefu = "chakefu",
+    xuanzhuan = "xuanzhuan"
 }

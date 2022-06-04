@@ -1,7 +1,7 @@
 import { Class_doorTriggerEnum, itemStatusEnum, itemTypeEnum, shuakaTriggerEnum, wuziTriggerEnum } from '../enum';
 import Singleton from '../Base/Singleton';
 import EventManager from './EventMnager';
-import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum, EinsteinTriggerEnum } from '../enum/index';
+import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum, EinsteinTriggerEnum, chakefuTriggerEnum } from '../enum/index';
 import { teaTriggerMananger } from '../trigger/teaTriggerManager';
 
 interface IItem{
@@ -33,6 +33,7 @@ export default class DataManager extends Singleton{
         {type: itemTypeEnum.chart, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.jiandao, status: itemStatusEnum.Scene},
         {type: itemTypeEnum.ticket, status: itemStatusEnum.Scene},
+        {type: itemTypeEnum.huochai, status: itemStatusEnum.Scene},
     ]
   
     private _isSelect = false
@@ -128,6 +129,18 @@ export default class DataManager extends Singleton{
 
     set Class_doorstatus(newData: Class_doorTriggerEnum){
         this._Class_doorstatus = newData
+
+        this.render()
+    }
+
+    private _chakeStatus: chakefuTriggerEnum = chakefuTriggerEnum.chakefu
+
+    get chakeStatus(){
+        return this._chakeStatus
+    }
+
+    set chakeStatus(newData: chakefuTriggerEnum){
+        this._chakeStatus = newData
 
         this.render()
     }

@@ -668,6 +668,10 @@
       "__uuid__": "b1dae275-c165-4b73-8725-7b37bacd453f",
       "__expectedType__": "cc.Prefab"
     },
+    "huochaiPrefab": {
+      "__uuid__": "a5baaff7-55e2-46c8-a205-1b5e53fdbd36",
+      "__expectedType__": "cc.Prefab"
+    },
     "leftbtn": {
       "__id__": 11
     },

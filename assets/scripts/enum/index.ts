@@ -71,7 +71,8 @@ export enum triggerTypeEnum{
     panzitrigger = "panzitrigger",
     wuzitrigger = "wuzitrigger",
     shuakatrigger = "shuakatrigger",
-    EinsteinTrigger = "EinsteinTrigger"
+    EinsteinTrigger = "EinsteinTrigger",
+    Class_doorTrigger = "Class_doorTrigger"
 }
 
 export enum triggerStatusEnum{
@@ -118,4 +119,9 @@ export enum shuakaTriggerEnum{
 export enum EinsteinTriggerEnum{
     empty = "empty",
     Einstein = "Einstein"
+}
+
+export enum Class_doorTriggerEnum{
+    empty = "empty",
+    open = "open"
 }

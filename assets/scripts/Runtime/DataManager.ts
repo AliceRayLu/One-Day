@@ -1,4 +1,4 @@
-import { itemStatusEnum, itemTypeEnum, shuakaTriggerEnum, wuziTriggerEnum } from '../enum';
+import { Class_doorTriggerEnum, itemStatusEnum, itemTypeEnum, shuakaTriggerEnum, wuziTriggerEnum } from '../enum';
 import Singleton from '../Base/Singleton';
 import EventManager from './EventMnager';
 import { EventEnum, triggerStatusEnum, cupTriggerStatusEnum, maoliangTriggerEnum, EinsteinTriggerEnum } from '../enum/index';
@@ -116,6 +116,18 @@ export default class DataManager extends Singleton{
 
     set Einsteinstatus(newData: EinsteinTriggerEnum){
         this._Einsteinstatus = newData
+
+        this.render()
+    }
+
+    private _Class_doorstatus: Class_doorTriggerEnum = Class_doorTriggerEnum.empty
+
+    get Class_doorstatus(){
+        return this._Class_doorstatus
+    }
+
+    set Class_doorstatus(newData: Class_doorTriggerEnum){
+        this._Class_doorstatus = newData
 
         this.render()
     }

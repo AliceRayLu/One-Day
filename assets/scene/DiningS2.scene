@@ -885,7 +885,7 @@
         "__id__": 35
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 43
@@ -1175,7 +1175,7 @@
       "b": 187,
       "a": 255
     },
-    "_string": "How much spent?",
+    "_string": "妈妈说，记得记账哦",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 20,
@@ -1425,7 +1425,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "button",
+    "_string": "check",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 20,

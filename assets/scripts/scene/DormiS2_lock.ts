@@ -6,12 +6,14 @@ export class NewComponent extends Component {
     private isDragging: boolean = false;
     private touchStartPos: Vec3 = new Vec3();
     private touchMoveDistance: number = 0;
-    private curNum: number = 0;
+    @property
+    curNum: number = 0;
 
     start() {
         this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
         this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
         this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+        this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this);
 
     }
 
@@ -42,12 +44,12 @@ export class NewComponent extends Component {
 
     onTouchEnd(event: EventTouch) {
         this.isDragging = false;
-
+        let targetY = 335;
         if (this.touchMoveDistance > 0) {
             if (this.touchMoveDistance < 75) {
                 const moveUp = new Tween(this.node);
                 moveUp.to(0.2, { position: new Vec3(this.node.position.x, this.node.position.y + (75 - this.touchMoveDistance), this.node.position.z) });
-
+                targetY = this.node.position.y + 75 - this.touchMoveDistance
                 // 播放动画
                 moveUp.start();
 
@@ -59,7 +61,7 @@ export class NewComponent extends Component {
                 // 创建一个移动动画
                 const moveUp = new Tween(this.node);
                 moveUp.to(0.2, { position: new Vec3(this.node.position.x, this.node.position.y + (-75 - this.touchMoveDistance), this.node.position.z) });
-
+                targetY = this.node.position.y -75 - this.touchMoveDistance
                 // 播放动画
                 moveUp.start();
 
@@ -74,5 +76,7 @@ export class NewComponent extends Component {
         this.node.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
         this.node.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
         this.node.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+        this.node.off(Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this);
+
     }
 }

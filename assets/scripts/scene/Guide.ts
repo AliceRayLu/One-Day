@@ -11,7 +11,7 @@ export class Guide extends Component {
 
     static guideDir: boolean = false;
     start() {
-        this.node.on(Node.EventType.TOUCH_END, this.vanish, this);
+        // this.node.on(Node.EventType.TOUCH_END, this.vanish, this);
     }
 
     onLoad() {
@@ -22,7 +22,8 @@ export class Guide extends Component {
 
     guide() {
         if (!Guide.guideDir) {
-            this.scheduleOnce(this.showPopUpEffect, 3);
+            this.scheduleOnce(this.showPopUpEffect, 2);
+            this.scheduleOnce(this.vanish, 5);
         }
     }
 
@@ -35,7 +36,7 @@ export class Guide extends Component {
         this.bubble.scale = new Vec3(0, 0, 1);
 
         // 创建弹出动画
-        this.playPopUpAnimation(this.guideLabel, 0.3);
+        this.playPopUpAnimation(this.guideLabel, 0.2);
         this.playPopUpAnimation(this.bubble, 0.2);
     }
 

@@ -5,12 +5,18 @@ const { ccclass, property } = _decorator;
 @ccclass('Dormi_lock')
 export class Dormi_lock extends Component {
     static isLock: boolean = true;
-
+    static guideTouch: boolean = false;
     @property(Node)
     guideLabel: Node;
 
     @property(Node)
     bubble: Node;
+
+    @property(Node)
+    guideLabel2: Node;
+
+    @property(Node)
+    bubble2: Node;
 
     start() {
         this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
@@ -38,9 +44,20 @@ export class Dormi_lock extends Component {
     update(deltaTime: number) {
     }
 
+
     onLoad() {
         this.guideLabel.active = false;
         this.bubble.active = false;
+        this.guideLabel2.active = false;
+        this.bubble2.active = false;
+        this.guide();
+    }
+
+    guide() {
+        if (!Dormi_lock.guideTouch) {
+            this.scheduleOnce(this.showPopUpEffectGuide, 0.5);
+            this.scheduleOnce(this.vanishGuide, 5);
+        }
     }
 
     onTouchStart() {
@@ -58,9 +75,11 @@ export class Dormi_lock extends Component {
     }
 
     showHint(){
+        this.vanishGuide();
         this.showPopUpEffect();
         this.scheduleOnce(this.vanish, 3);
     }
+
     showPopUpEffect() {
         this.guideLabel.active = true;
         this.bubble.active = true;
@@ -97,6 +116,36 @@ export class Dormi_lock extends Component {
             }                                 // 旋转缓动
             )
             .start();
+    }
+
+    showPopUpEffectGuide() {
+        this.guideLabel2.active = true;
+        this.bubble2.active = true;
+
+        // 设置初始缩放为0
+        this.guideLabel2.scale = new Vec3(0, 0, 1);
+        this.bubble2.scale = new Vec3(0, 0, 1);
+
+        // 创建弹出动画
+        this.playPopUpAnimation(this.guideLabel2, 0.2);
+        this.playPopUpAnimation(this.bubble2, 0.2);
+    }
+
+    vanishGuide() {
+        tween(this.bubble2)
+            .to(0.2, {
+                scale: new Vec3(0, 0, 1),                     // 缩放缓动
+            }                                 // 旋转缓动
+            )
+            .start();
+
+        tween(this.guideLabel2)
+            .to(0.1, {
+                scale: new Vec3(0, 0, 1),                     // 缩放缓动
+            }                                 // 旋转缓动
+            )
+            .start();
+        Dormi_lock.guideTouch = true;
     }
 }
 

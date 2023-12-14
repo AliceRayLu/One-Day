@@ -22,7 +22,7 @@ export class Guide extends Component {
 
     guide() {
         if (!Guide.guideDir) {
-            this.scheduleOnce(this.showPopUpEffect, 2);
+            this.scheduleOnce(this.showPopUpEffect, 0.5);
             this.scheduleOnce(this.vanish, 5);
         }
     }

@@ -18,7 +18,7 @@ export class shuakaTriggerManager extends triggerManager {
         if(DataManager.Instance.curItemType === itemTypeEnum.card && DataManager.Instance.isSelect){
             DataManager.Instance.curItemType = null
             DataManager.Instance.isSelect = false
-            // DataManager.Instance.items.find(i=>i.type === itemTypeEnum.card).status = itemStatusEnum.Disable
+            DataManager.Instance.items.find(i=>i.type === itemTypeEnum.card).status = itemStatusEnum.Disable
             DataManager.Instance.items = [...DataManager.Instance.items]
             DataManager.Instance.shuakaStatus = shuakaTriggerEnum.money
             

@@ -1,15 +1,15 @@
 import { _decorator, Component, Node, Label, Tween, v3, Vec3, Sprite, Color, tween } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('Guide')
-export class Guide extends Component {
+@ccclass('GuideBag')
+export class GuideBag extends Component {
     @property(Node)
     guideLabel: Node;
 
     @property(Node)
     bubble: Node;
 
-    static guideDir: boolean = false;
+    static guideBag: boolean = false;
     start() {
         // this.node.on(Node.EventType.TOUCH_END, this.vanish, this);
     }
@@ -21,9 +21,10 @@ export class Guide extends Component {
     }
 
     guide() {
-        if (!Guide.guideDir) {
+        if (!GuideBag.guideBag) {
+            GuideBag.guideBag = true;
             this.scheduleOnce(this.showPopUpEffect, 0.5);
-            this.scheduleOnce(this.vanish, 5);
+            this.scheduleOnce(this.vanish, 3);
         }
     }
 
@@ -64,7 +65,6 @@ export class Guide extends Component {
             }                                 // 旋转缓动
             )
             .start();
-        Guide.guideDir = true;
     }
 
 }

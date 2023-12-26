@@ -243,7 +243,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 480,
+      "x": 479.99999999999994,
       "y": 320,
       "z": 0
     },
@@ -714,8 +714,8 @@
     "__prefab": null,
     "_alignFlags": 45,
     "_target": null,
-    "_left": 0,
-    "_right": 0,
+    "_left": -5.684341886080802e-14,
+    "_right": -5.684341886080802e-14,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -748,6 +748,8 @@
     "items": {
       "__id__": 17
     },
+    "todolistPrefab": null,
+    "todolistPlaceholder": null,
     "_id": "24G4N9yShIgYaAVDGcuvi9"
   },
   {

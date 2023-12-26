@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, AudioSource, Component, Node } from 'cc';
 import { cupTriggerStatusEnum, itemStatusEnum, itemTypeEnum, triggerStatusEnum, triggerTypeEnum } from '../enum';
 import DataManager from '../Runtime/DataManager';
 import { triggerManager } from './triggerManager';
@@ -18,6 +18,9 @@ export class teaTriggerMananger extends triggerManager {
     @property(Node)
     tea: Node = null
 
+    @property(AudioSource)
+    public audioSource: AudioSource = null!;
+
     handleTrigger(){
         if(DataManager.Instance.curItemType === itemTypeEnum.Chahu && DataManager.Instance.isSelect){
             DataManager.Instance.curItemType = null
@@ -25,7 +28,7 @@ export class teaTriggerMananger extends triggerManager {
             DataManager.Instance.items.find(i=>i.type === itemTypeEnum.Chahu).status = itemStatusEnum.Disable
             DataManager.Instance.items = [...DataManager.Instance.items]
             DataManager.Instance.teaStatus = cupTriggerStatusEnum.water
-            
+            this.audioSource.play();
         }
         if(DataManager.Instance.curItemType === itemTypeEnum.Chaye && DataManager.Instance.isSelect && DataManager.Instance.teaStatus === cupTriggerStatusEnum.water){
             DataManager.Instance.curItemType = null
@@ -33,7 +36,6 @@ export class teaTriggerMananger extends triggerManager {
             DataManager.Instance.items.find(i=>i.type === itemTypeEnum.Chaye).status = itemStatusEnum.Disable
             DataManager.Instance.items = [...DataManager.Instance.items]
             DataManager.Instance.teaStatus = cupTriggerStatusEnum.tea
-            
         }
     }
 

@@ -67,7 +67,7 @@ export class Dormi_lock extends Component {
     guide() {
         if (!Dormi_lock.guideTouch) {
             this.scheduleOnce(this.showPopUpEffectGuide, 0.5);
-            this.scheduleOnce(this.vanishGuide, 5);
+            this.scheduleOnce(this.vanishGuide, 3);
         }
     }
 

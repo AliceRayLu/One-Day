@@ -29,7 +29,7 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 38
+      "__id__": 39
     },
     "_id": "82cdb12c-4bb9-4c54-a2ff-fa1bb6178674"
   },
@@ -225,14 +225,11 @@
         "__id__": 15
       },
       {
-        "__id__": 29
+        "__id__": 30
       }
     ],
     "_active": true,
     "_components": [
-      {
-        "__id__": 34
-      },
       {
         "__id__": 35
       },
@@ -241,12 +238,15 @@
       },
       {
         "__id__": 37
+      },
+      {
+        "__id__": 38
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 480.00000000000006,
+      "x": 479.99999999999994,
       "y": 320,
       "z": 0
     },
@@ -328,7 +328,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 341.3718411552347,
+    "_orthoHeight": 320,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -551,6 +551,9 @@
       },
       {
         "__id__": 26
+      },
+      {
+        "__id__": 28
       },
       {
         "__id__": 27
@@ -942,7 +945,28 @@
     "tea": {
       "__id__": 22
     },
+    "audioSource": {
+      "__id__": 27
+    },
     "_id": "66vp93cQxBpqzT8s//2SHB"
+  },
+  {
+    "__type__": "cc.AudioSource",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 15
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_clip": {
+      "__uuid__": "31b084b7-8f57-4127-b76f-968a9894da18",
+      "__expectedType__": "cc.AudioClip"
+    },
+    "_loop": false,
+    "_playOnAwake": false,
+    "_volume": 1,
+    "_id": "b9DexUU6xKmKJayR7WMmuU"
   },
   {
     "__type__": "cc.Button",
@@ -955,7 +979,7 @@
     "__prefab": null,
     "clickEvents": [
       {
-        "__id__": 28
+        "__id__": 29
       }
     ],
     "_interactable": true,
@@ -1018,13 +1042,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 30
-      },
-      {
         "__id__": 31
       },
       {
         "__id__": 32
+      },
+      {
+        "__id__": 33
       }
     ],
     "_prefab": null,
@@ -1061,7 +1085,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 29
+      "__id__": 30
     },
     "_enabled": true,
     "__prefab": null,
@@ -1082,7 +1106,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 29
+      "__id__": 30
     },
     "_enabled": true,
     "__prefab": null,
@@ -1121,13 +1145,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 29
+      "__id__": 30
     },
     "_enabled": true,
     "__prefab": null,
     "clickEvents": [
       {
-        "__id__": 33
+        "__id__": 34
       }
     ],
     "_interactable": true,
@@ -1229,8 +1253,8 @@
     "__prefab": null,
     "_alignFlags": 45,
     "_target": null,
-    "_left": 5.684341886080802e-14,
-    "_right": 5.684341886080802e-14,
+    "_left": -5.684341886080802e-14,
+    "_right": -5.684341886080802e-14,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -1268,19 +1292,19 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 39
-    },
-    "shadows": {
       "__id__": 40
     },
-    "_skybox": {
+    "shadows": {
       "__id__": 41
     },
-    "fog": {
+    "_skybox": {
       "__id__": 42
     },
-    "octree": {
+    "fog": {
       "__id__": 43
+    },
+    "octree": {
+      "__id__": 44
     }
   },
   {

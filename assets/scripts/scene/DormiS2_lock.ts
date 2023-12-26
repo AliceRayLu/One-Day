@@ -1,4 +1,4 @@
-import { _decorator, Component, EventTouch, Node, systemEvent, SystemEvent, Tween, Vec3 } from 'cc';
+import { _decorator, AudioSource, Component, EventTouch, Node, systemEvent, SystemEvent, Tween, Vec3 } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('NewComponent')
@@ -8,6 +8,9 @@ export class NewComponent extends Component {
     private touchMoveDistance: number = 0;
     @property
     curNum: number = 0;
+
+    @property(AudioSource)
+    public audioSource: AudioSource = null!;
 
     start() {
         this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
@@ -69,6 +72,8 @@ export class NewComponent extends Component {
             }
             this.curNum--;
         }
+        this.audioSource.play();
+        
     }
 
 

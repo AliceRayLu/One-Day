@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Sprite, director, Vec3, tween} from 'cc';
+import { _decorator, Component, Node, Sprite, director, Vec3, tween, AudioSource} from 'cc';
 import { NewComponent } from './DormiS2_lock';
 const { ccclass, property } = _decorator;
 
@@ -17,6 +17,9 @@ export class Dormi_lock extends Component {
 
     @property(Node)
     bubble2: Node;
+
+    @property(AudioSource)
+    public audioSource: AudioSource = null!;
 
     start() {
         this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
@@ -42,6 +45,14 @@ export class Dormi_lock extends Component {
     }
 
     update(deltaTime: number) {
+        let num1 = this.node.getChildByName('mask1')?.getChildByName('num').getComponent(NewComponent).curNum;
+        let num2 = this.node.getChildByName('mask2')?.getChildByName('num').getComponent(NewComponent).curNum;
+        let num3 = this.node.getChildByName('mask3')?.getChildByName('num').getComponent(NewComponent).curNum;
+        let num4 = this.node.getChildByName('mask4')?.getChildByName('num').getComponent(NewComponent).curNum;
+        if (Dormi_lock.isLock && num1 == 2 && num2 == 1 && num3 == 4 && num4 == 2) {
+            this.audioSource.play();
+            Dormi_lock.isLock = false;
+        }
     }
 
 
